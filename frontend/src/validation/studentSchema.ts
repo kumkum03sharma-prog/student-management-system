@@ -24,25 +24,9 @@ const phoneNumber = z
 const dateOfBirth = z
   .string()
   .min(1, "Date of birth is required")
-  .refine((v) => !Number.isNaN(new Date(v).getTime()), {
-    message: "Enter a valid date",
-  })
   .refine((v) => new Date(v) < new Date(), {
-    message: "Date of birth must be in the past",
-  })
-  .refine(
-    (v) => {
-      const dob = new Date(v);
-      const now = new Date();
-      let age = now.getFullYear() - dob.getFullYear();
-      const beforeBirthday =
-        now.getMonth() < dob.getMonth() ||
-        (now.getMonth() === dob.getMonth() && now.getDate() < dob.getDate());
-      if (beforeBirthday) age -= 1;
-      return age >= 5 && age <= 100;
-    },
-    { message: "Age must be between 5 and 100 years" },
-  );
+    message: "Date of birth cannot be in the future",
+  });
 
 const gender = z.enum(["Male", "Female", "Other"], {
   message: "Please select a gender",
