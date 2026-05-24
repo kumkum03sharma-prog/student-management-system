@@ -1,14 +1,11 @@
-import { useNavigate, Link, useLocation } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./css/navbar.css";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const location = useLocation();
 
   const token = localStorage.getItem("token");
   const isLoggedIn = Boolean(token);
-
-  void location.pathname;
 
   const handleLogout = () => {
     localStorage.removeItem("token");
