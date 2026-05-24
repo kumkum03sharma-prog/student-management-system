@@ -41,7 +41,7 @@ const address = z
 const courseEnrolled = z
   .string()
   .trim()
-  .min(2, "Course must be at least 2 characters")
+  .min(1, "Course must be at least 1 characters")
   .max(80, "Course name is too long");
 
 const password = z

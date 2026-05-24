@@ -1,7 +1,11 @@
 
 import CryptoJS from "crypto-js";
 
-const FRONTEND_SECRET = import.meta.env.VITE_FRONTEND_SECRET || "";
+const FRONTEND_SECRET = import.meta.env.VITE_FRONTEND_SECRET;
+
+if (!FRONTEND_SECRET) {
+  throw new Error("VITE_FRONTEND_SECRET must be set in frontend/.env");
+}
 
 export const encryptData = (data: object): string => {
   return CryptoJS.AES.encrypt(JSON.stringify(data), FRONTEND_SECRET).toString();
