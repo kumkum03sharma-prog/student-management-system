@@ -1,0 +1,31 @@
+# Dependencies (safety net for any nested package)
+node_modules
+
+# Build artefacts
+dist
+build
+
+# Env files anywhere in the repo
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.swp
+*.swo
+
+# Logs
+*.log
+logs
+
+# Coverage
+coverage
+.nyc_output
