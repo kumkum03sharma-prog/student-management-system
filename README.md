@@ -30,6 +30,7 @@ MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 FRONTEND_SECRET=your_frontend_secret_key
 BACKEND_SECRET=your_backend_secret_key
+FRONTEND_URL=your_frontend_url
 ```
 
 ### Frontend
