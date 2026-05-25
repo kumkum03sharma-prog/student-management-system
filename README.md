@@ -16,9 +16,9 @@ A full-stack student management system with two-level AES encryption.
 - MongoDB
 - npm
 
-### Backend
+### Server
 ```bash
-cd backend
+cd server
 npm install
 npm run dev
 ```
@@ -33,9 +33,9 @@ BACKEND_SECRET=your_backend_secret_key
 FRONTEND_URL=your_frontend_url
 ```
 
-### Frontend
+### Client
 ```bash
-cd frontend
+cd client
 npm install
 npm run dev
 ```
