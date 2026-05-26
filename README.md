@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Student Management System
 
 A full-stack student management system with two-level AES encryption.
@@ -56,3 +57,6 @@ VITE_FRONTEND_SECRET=your_frontend_secret_key
 | DELETE | /api/student/:id | JWT Required | Delete a student |
 
 ## How Encryption Works
+=======
+# student-management-system
+>>>>>>> 8218e582e3d38426fbbcc5a673d5af586a9533b7
