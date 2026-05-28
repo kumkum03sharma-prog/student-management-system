@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Student Management System
 
 A full-stack student management system with two-level AES encryption.
@@ -57,6 +56,7 @@ VITE_FRONTEND_SECRET=your_frontend_secret_key
 | DELETE | /api/student/:id | JWT Required | Delete a student |
 
 ## How Encryption Works
-=======
-# student-management-system
->>>>>>> 8218e582e3d38426fbbcc5a673d5af586a9533b7
+- Level 1: Client encrypts data with FRONTEND_SECRET before sending
+- Level 2: Server re-encrypts with BACKEND_SECRET before storing in MongoDB
+- Passwords hashed with bcrypt, never stored in encrypted blob
+- Protected routes require JWT token in Authorization header
